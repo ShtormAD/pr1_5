@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxWidth="350.0" minWidth="350.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pr1_5.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox alignment="CENTER" prefHeight="30.0" prefWidth="150.0">
+      <children>
+         <Label text="x:" />
+         <Spinner fx:id="SPNR_X" maxWidth="55.0" minWidth="55.0" prefWidth="55.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Spinner>
+         <Label text="y:" />
+         <Spinner fx:id="SPNR_Y" maxWidth="55.0" minWidth="55.0" prefWidth="55.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin>
+         </Spinner>
+         <Button mnemonicParsing="false" onAction="#recreateTable" text="Создать" />
+      </children>
+   </HBox>
+   <TableView fx:id="TV" editable="true" prefHeight="280.0" prefWidth="250.0">
+      <VBox.margin>
+         <Insets bottom="10.0" top="10.0" />
+      </VBox.margin></TableView>
+   <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+      <children>
+         <Label text="Строка p:" />
+         <TextField fx:id="TF_p" maxWidth="50.0" minWidth="50.0" prefWidth="50.0">
+            <HBox.margin>
+               <Insets right="10.0" />
+            </HBox.margin></TextField>
+         <Label text="Столбец q:" />
+         <TextField fx:id="TF_q" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+      </children>
+   </HBox>
+
+    <Label fx:id="LBL_x" />
+   <Label fx:id="LBL_y" />
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+</VBox>
